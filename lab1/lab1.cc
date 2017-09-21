@@ -11,7 +11,7 @@ void gen_adder(const std::pair<int, int>& a, const std::pair<int, int>& b,
     << "_" << res.second << ")\n);\n";
 }
 
-void gen_wire(std::pair<int, int> a, std::ostringstream& os)
+void gen_wire(const std::pair<int, int>& a, std::ostringstream& os)
 {
     os << "wire [WIDTH-1:0] t" << a.first << "_" << a.second <<";\n"; 
 }
