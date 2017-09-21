@@ -2,8 +2,8 @@
 #include <sstream>
 #include <stack>
 
-void gen_adder(std::pair<int, int> a, std::pair<int, int> b, 
-    std::pair<int, int> res, std::ostringstream& os)
+void gen_adder(const std::pair<int, int>& a, const std::pair<int, int>& b, 
+    const std::pair<int, int>& res, std::ostringstream& os)
 {
   os << "adder #(.WIDTH(WIDTH), .NUM(NUM)) x" << a.first << "_" 
     << a.second << "\n(\n.a(t" << a.first << "_" << a.second << "),\n.b(t" 
@@ -102,7 +102,7 @@ module func #(parameter WIDTH = `WIDTH, NUM = `NUM)
 endmodule
 
 //**********
-module neuron #(parameter WIDTH = `WIDTH, NUM = `NUM)
+module lab1 #(parameter WIDTH = `WIDTH, NUM = `NUM)
 (
   input [WIDTH-1:0] inputs [0:NUM-1],
   input [WIDTH-1:0] weights [0:NUM-1],
@@ -116,15 +116,19 @@ wire [WIDTH-1:0] ares;
 // I*W
 generate
 genvar i;
-  for (i=0; i<NUM; i=i+1)
+  for (i=0; i<NUM; i=i+1) begin : gen_muls
     multiplier m(.i(inputs[i]), .w(weights[i]), .res(mres[i]));
+  end
 endgenerate
 
 // S = S + I*W)";
   
+  if (argv < 2) exit(1);
+  
+  const int n = std::atoi(argc[1]);
+
   std::string tail("func f(.a(ares), .res(out)); \nendmodule");
 
-  const int n = 20;
   const int carry = 0;
   const int level = 1;
 
