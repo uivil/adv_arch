@@ -1,5 +1,6 @@
 #include <iostream>
 #include <sstream>
+#include <fstream>
 #include <stack>
 
 void gen_adder(const std::pair<int, int>& a, const std::pair<int, int>& b, 
@@ -13,7 +14,11 @@ void gen_adder(const std::pair<int, int>& a, const std::pair<int, int>& b,
 
 void gen_wire(const std::pair<int, int>& a, std::ostringstream& os)
 {
-    os << "wire [WIDTH-1:0] t" << a.first << "_" << a.second <<";\n"; 
+  os << "wire [WIDTH-1:0] t" << a.first << "_" << a.second; 
+  if (a.second == 1)
+    os << " = mres[" << a.first-1 <<"]";
+
+  os << ";\n";
 }
 
 
@@ -68,73 +73,23 @@ std::string gen(int n, int level, int carry)
 
 int main(int argv, char **argc)
 {
-  std::string head = R"(`define NUM 10
-`define WIDTH 10
-
-//**********
-module multiplier #(parameter WIDTH = `WIDTH, NUM = `NUM)
-(
-  input [WIDTH-1:0] i,
-  input [WIDTH-1:0] w,
-  output [WIDTH-1:0] res
-);
-  assign res = i * w;
-endmodule
-
-//**********
-module adder #(parameter WIDTH = `WIDTH, NUM = `NUM)
-(
-  input [WIDTH-1:0] a,
-  input [WIDTH-1:0] b,
-  output [WIDTH-1:0] res
-);
-  assign res = a + b;
-endmodule
-
-
-//**********
-module func #(parameter WIDTH = `WIDTH, NUM = `NUM)
-(
-  input [WIDTH-1:0] a,
-  output [WIDTH-1:0] res
-);
-  assign res = {a[WIDTH-1], {WIDTH-1{1'b0}}};
-endmodule
-
-//**********
-module lab1 #(parameter WIDTH = `WIDTH, NUM = `NUM)
-(
-  input [WIDTH-1:0] inputs [0:NUM-1],
-  input [WIDTH-1:0] weights [0:NUM-1],
-
-  output [WIDTH-1:0] out
-);
-
-wire [WIDTH-1:0] mres [0:NUM-1];
-wire [WIDTH-1:0] ares;
-
-// I*W
-generate
-genvar i;
-  for (i=0; i<NUM; i=i+1) begin : gen_muls
-    multiplier m(.i(inputs[i]), .w(weights[i]), .res(mres[i]));
-  end
-endgenerate
-
-// S = S + I*W)";
-  
   if (argv < 2) exit(1);
   
   const int n = std::atoi(argc[1]);
-
-  std::string tail("func f(.a(ares), .res(out)); \nendmodule");
-
-  const int carry = 0;
   const int level = 1;
+  const int carry = 0;
+  
+  std::ifstream h("head.vh");
+  std::stringstream head;
+  head << h.rdbuf();
 
-  std::cout << head << "\n";
-  std::cout << gen(n, level, carry);
-  std::cout << tail;
+  std::ifstream t("tail.vh");
+  std::stringstream tail;
+  tail << t.rdbuf();
+  
+  std::cout << head.str() << std::endl;
+  std::cout << gen(n, level, carry) << std::endl;
+  std::cout << tail.str() << std::endl;
 
   return 0;
 }

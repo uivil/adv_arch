@@ -52,8 +52,10 @@ genvar i;
 endgenerate
 
 // S = S + I*W
-wire [WIDTH-1:0] t1_1;
-wire [WIDTH-1:0] t2_1;
+ 
+
+wire [WIDTH-1:0] t1_1 = mres[0];
+wire [WIDTH-1:0] t2_1 = mres[1];
 wire [WIDTH-1:0] t1_2;
 adder #(.WIDTH(WIDTH), .NUM(NUM)) x1_1
 (
@@ -61,8 +63,8 @@ adder #(.WIDTH(WIDTH), .NUM(NUM)) x1_1
 .b(t2_1),
 .res(t1_2)
 );
-wire [WIDTH-1:0] t3_1;
-wire [WIDTH-1:0] t4_1;
+wire [WIDTH-1:0] t3_1 = mres[2];
+wire [WIDTH-1:0] t4_1 = mres[3];
 wire [WIDTH-1:0] t2_2;
 adder #(.WIDTH(WIDTH), .NUM(NUM)) x3_1
 (
@@ -70,8 +72,8 @@ adder #(.WIDTH(WIDTH), .NUM(NUM)) x3_1
 .b(t4_1),
 .res(t2_2)
 );
-wire [WIDTH-1:0] t5_1;
-wire [WIDTH-1:0] t6_1;
+wire [WIDTH-1:0] t5_1 = mres[4];
+wire [WIDTH-1:0] t6_1 = mres[5];
 wire [WIDTH-1:0] t3_2;
 adder #(.WIDTH(WIDTH), .NUM(NUM)) x5_1
 (
@@ -79,8 +81,8 @@ adder #(.WIDTH(WIDTH), .NUM(NUM)) x5_1
 .b(t6_1),
 .res(t3_2)
 );
-wire [WIDTH-1:0] t7_1;
-wire [WIDTH-1:0] t8_1;
+wire [WIDTH-1:0] t7_1 = mres[6];
+wire [WIDTH-1:0] t8_1 = mres[7];
 wire [WIDTH-1:0] t4_2;
 adder #(.WIDTH(WIDTH), .NUM(NUM)) x7_1
 (
@@ -88,41 +90,14 @@ adder #(.WIDTH(WIDTH), .NUM(NUM)) x7_1
 .b(t8_1),
 .res(t4_2)
 );
-wire [WIDTH-1:0] t9_1;
-wire [WIDTH-1:0] t10_1;
+wire [WIDTH-1:0] t9_1 = mres[8];
+wire [WIDTH-1:0] t10_1 = mres[9];
 wire [WIDTH-1:0] t5_2;
 adder #(.WIDTH(WIDTH), .NUM(NUM)) x9_1
 (
 .a(t9_1),
 .b(t10_1),
 .res(t5_2)
-);
-wire [WIDTH-1:0] t11_1;
-wire [WIDTH-1:0] t12_1;
-wire [WIDTH-1:0] t6_2;
-adder #(.WIDTH(WIDTH), .NUM(NUM)) x11_1
-(
-.a(t11_1),
-.b(t12_1),
-.res(t6_2)
-);
-wire [WIDTH-1:0] t13_1;
-wire [WIDTH-1:0] t14_1;
-wire [WIDTH-1:0] t7_2;
-adder #(.WIDTH(WIDTH), .NUM(NUM)) x13_1
-(
-.a(t13_1),
-.b(t14_1),
-.res(t7_2)
-);
-wire [WIDTH-1:0] t15_1;
-wire [WIDTH-1:0] t16_1;
-wire [WIDTH-1:0] t8_2;
-adder #(.WIDTH(WIDTH), .NUM(NUM)) x15_1
-(
-.a(t15_1),
-.b(t16_1),
-.res(t8_2)
 );
 wire [WIDTH-1:0] t1_3;
 adder #(.WIDTH(WIDTH), .NUM(NUM)) x1_2
@@ -138,20 +113,6 @@ adder #(.WIDTH(WIDTH), .NUM(NUM)) x3_2
 .b(t4_2),
 .res(t2_3)
 );
-wire [WIDTH-1:0] t3_3;
-adder #(.WIDTH(WIDTH), .NUM(NUM)) x5_2
-(
-.a(t5_2),
-.b(t6_2),
-.res(t3_3)
-);
-wire [WIDTH-1:0] t4_3;
-adder #(.WIDTH(WIDTH), .NUM(NUM)) x7_2
-(
-.a(t7_2),
-.b(t8_2),
-.res(t4_3)
-);
 wire [WIDTH-1:0] t1_4;
 adder #(.WIDTH(WIDTH), .NUM(NUM)) x1_3
 (
@@ -159,27 +120,15 @@ adder #(.WIDTH(WIDTH), .NUM(NUM)) x1_3
 .b(t2_3),
 .res(t1_4)
 );
-wire [WIDTH-1:0] t2_4;
-adder #(.WIDTH(WIDTH), .NUM(NUM)) x3_3
-(
-.a(t3_3),
-.b(t4_3),
-.res(t2_4)
-);
 wire [WIDTH-1:0] t1_5;
 adder #(.WIDTH(WIDTH), .NUM(NUM)) x1_4
 (
 .a(t1_4),
-.b(t2_4),
+.b(t5_2),
 .res(t1_5)
 );
-wire [WIDTH-1:0] t1_6;
-adder #(.WIDTH(WIDTH), .NUM(NUM)) x1_5
-(
-.a(t1_5),
-.b(t17_1),
-.res(t1_6)
-);
-assign ares = t1_6;
+assign ares = t1_5;
+
 func f(.a(ares), .res(out)); 
 endmodule
+
