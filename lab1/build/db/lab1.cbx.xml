@@ -1,35 +1,5 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="lab1">
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[0].m|lpm_mult:Mult0" CBX_FILE_NAME="mult_igt.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[3].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_c2h1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[6].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_ev82.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[8].m|lpm_mult:Mult0" CBX_FILE_NAME="mult_igt.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[1].m|lpm_mult:Mult0" CBX_FILE_NAME="mult_igt.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[4].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_c2h1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[7].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_ev82.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[9].m|lpm_mult:Mult0" CBX_FILE_NAME="mult_igt.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[0].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_ev82.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[2].m|lpm_mult:Mult0" CBX_FILE_NAME="mult_igt.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[5].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_c2h1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[8].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_ev82.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[1].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_ev82.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[3].m|lpm_mult:Mult0" CBX_FILE_NAME="mult_igt.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[6].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_c2h1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[9].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_ev82.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[2].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_ev82.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[4].m|lpm_mult:Mult0" CBX_FILE_NAME="mult_igt.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[7].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_c2h1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[0].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_c2h1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[3].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_ev82.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[5].m|lpm_mult:Mult0" CBX_FILE_NAME="mult_igt.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[8].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_c2h1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[1].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_c2h1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[4].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_ev82.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[6].m|lpm_mult:Mult0" CBX_FILE_NAME="mult_igt.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[9].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_c2h1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[2].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_c2h1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[5].m|lpm_mult:Mult0|mult_igt:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_ev82.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|lab1|multiplier:gen_muls[7].m|lpm_mult:Mult0" CBX_FILE_NAME="mult_igt.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

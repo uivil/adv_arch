@@ -1,11 +1,1 @@
 v1
-DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,multiplier:gen_muls[0].m|lpm_mult:Mult0|mult_igt:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,multiplier:gen_muls[1].m|lpm_mult:Mult0|mult_igt:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,multiplier:gen_muls[2].m|lpm_mult:Mult0|mult_igt:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,multiplier:gen_muls[3].m|lpm_mult:Mult0|mult_igt:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,multiplier:gen_muls[4].m|lpm_mult:Mult0|mult_igt:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,multiplier:gen_muls[5].m|lpm_mult:Mult0|mult_igt:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,multiplier:gen_muls[6].m|lpm_mult:Mult0|mult_igt:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,multiplier:gen_muls[7].m|lpm_mult:Mult0|mult_igt:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,multiplier:gen_muls[8].m|lpm_mult:Mult0|mult_igt:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,multiplier:gen_muls[9].m|lpm_mult:Mult0|mult_igt:auto_generated|mac_out2,

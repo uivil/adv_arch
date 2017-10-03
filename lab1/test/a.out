@@ -1,0 +1,248 @@
+#! /usr/bin/vvp
+:ivl_version "10.1 (stable)" "(v10_1)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+:vpi_module "v2009";
+S_0x55ec65c7e830 .scope module, "adder" "adder" 2 15;
+ .timescale 0 0;
+    .port_info 0 /INPUT 10 "a"
+    .port_info 1 /INPUT 10 "b"
+    .port_info 2 /OUTPUT 10 "res"
+P_0x55ec65c64790 .param/l "NUM" 0 2 15, +C4<00000000000000000000000000001010>;
+P_0x55ec65c647d0 .param/l "WIDTH" 0 2 15, +C4<00000000000000000000000000001010>;
+o0x7fda8e32e018 .functor BUFZ 10, C4<zzzzzzzzzz>; HiZ drive
+v0x55ec65c79ee0_0 .net "a", 9 0, o0x7fda8e32e018;  0 drivers
+o0x7fda8e32e048 .functor BUFZ 10, C4<zzzzzzzzzz>; HiZ drive
+v0x55ec65c9eae0_0 .net "b", 9 0, o0x7fda8e32e048;  0 drivers
+v0x55ec65c9ebc0_0 .net "res", 9 0, L_0x55ec65ca5e30;  1 drivers
+L_0x55ec65ca5e30 .arith/sum 10, o0x7fda8e32e018, o0x7fda8e32e048;
+S_0x55ec65c78940 .scope module, "lab1" "lab1" 2 65;
+ .timescale 0 0;
+v0x55ec65ca5b40 .array "inputs", 9 0, 9 0;
+v0x55ec65ca5c40_0 .net "out", 9 0, L_0x55ec65ca5640;  1 drivers
+v0x55ec65ca5d30 .array "weights", 9 0, 9 0;
+S_0x55ec65c796d0 .scope module, "n" "neuron" 2 73, 2 35 0, S_0x55ec65c78940;
+ .timescale 0 0;
+    .port_info 0 /INPUT 100 "inputs"
+    .port_info 1 /INPUT 100 "weights"
+    .port_info 2 /OUTPUT 10 "out"
+P_0x55ec65c79150 .param/l "NUM" 0 2 35, +C4<00000000000000000000000000001010>;
+P_0x55ec65c79190 .param/l "WIDTH" 0 2 35, +C4<00000000000000000000000000001010>;
+o0x7fda8e32e198 .functor BUFZ 10, C4<zzzzzzzzzz>; HiZ drive
+v0x55ec65ca5150_0 .net "ares", 9 0, o0x7fda8e32e198;  0 drivers
+v0x55ec65ca5b40_0 .array/port v0x55ec65ca5b40, 0;
+v0x55ec65ca5240 .array "inputs", 9 0;
+v0x55ec65ca5240_0 .net v0x55ec65ca5240 0, 9 0, v0x55ec65ca5b40_0; 1 drivers
+v0x55ec65ca5b40_1 .array/port v0x55ec65ca5b40, 1;
+v0x55ec65ca5240_1 .net v0x55ec65ca5240 1, 9 0, v0x55ec65ca5b40_1; 1 drivers
+v0x55ec65ca5b40_2 .array/port v0x55ec65ca5b40, 2;
+v0x55ec65ca5240_2 .net v0x55ec65ca5240 2, 9 0, v0x55ec65ca5b40_2; 1 drivers
+v0x55ec65ca5b40_3 .array/port v0x55ec65ca5b40, 3;
+v0x55ec65ca5240_3 .net v0x55ec65ca5240 3, 9 0, v0x55ec65ca5b40_3; 1 drivers
+v0x55ec65ca5b40_4 .array/port v0x55ec65ca5b40, 4;
+v0x55ec65ca5240_4 .net v0x55ec65ca5240 4, 9 0, v0x55ec65ca5b40_4; 1 drivers
+v0x55ec65ca5b40_5 .array/port v0x55ec65ca5b40, 5;
+v0x55ec65ca5240_5 .net v0x55ec65ca5240 5, 9 0, v0x55ec65ca5b40_5; 1 drivers
+v0x55ec65ca5b40_6 .array/port v0x55ec65ca5b40, 6;
+v0x55ec65ca5240_6 .net v0x55ec65ca5240 6, 9 0, v0x55ec65ca5b40_6; 1 drivers
+v0x55ec65ca5b40_7 .array/port v0x55ec65ca5b40, 7;
+v0x55ec65ca5240_7 .net v0x55ec65ca5240 7, 9 0, v0x55ec65ca5b40_7; 1 drivers
+v0x55ec65ca5b40_8 .array/port v0x55ec65ca5b40, 8;
+v0x55ec65ca5240_8 .net v0x55ec65ca5240 8, 9 0, v0x55ec65ca5b40_8; 1 drivers
+v0x55ec65ca5b40_9 .array/port v0x55ec65ca5b40, 9;
+v0x55ec65ca5240_9 .net v0x55ec65ca5240 9, 9 0, v0x55ec65ca5b40_9; 1 drivers
+v0x55ec65ca54c0 .array "mres", 9 0;
+v0x55ec65ca54c0_0 .net v0x55ec65ca54c0 0, 9 0, L_0x55ec65ca5f60; 1 drivers
+v0x55ec65ca54c0_1 .net v0x55ec65ca54c0 1, 9 0, L_0x55ec65ca60f0; 1 drivers
+v0x55ec65ca54c0_2 .net v0x55ec65ca54c0 2, 9 0, L_0x55ec65ca6280; 1 drivers
+v0x55ec65ca54c0_3 .net v0x55ec65ca54c0 3, 9 0, L_0x55ec65ca6410; 1 drivers
+v0x55ec65ca54c0_4 .net v0x55ec65ca54c0 4, 9 0, L_0x55ec65ca65a0; 1 drivers
+v0x55ec65ca54c0_5 .net v0x55ec65ca54c0 5, 9 0, L_0x55ec65ca6730; 1 drivers
+v0x55ec65ca54c0_6 .net v0x55ec65ca54c0 6, 9 0, L_0x55ec65ca68e0; 1 drivers
+v0x55ec65ca54c0_7 .net v0x55ec65ca54c0 7, 9 0, L_0x55ec65ca6a90; 1 drivers
+v0x55ec65ca54c0_8 .net v0x55ec65ca54c0 8, 9 0, L_0x55ec65ca6c40; 1 drivers
+v0x55ec65ca54c0_9 .net v0x55ec65ca54c0 9, 9 0, L_0x55ec65ca6df0; 1 drivers
+v0x55ec65ca5770_0 .net "out", 9 0, L_0x55ec65ca5640;  alias, 1 drivers
+v0x55ec65ca5d30_0 .array/port v0x55ec65ca5d30, 0;
+v0x55ec65ca5840 .array "weights", 9 0;
+v0x55ec65ca5840_0 .net v0x55ec65ca5840 0, 9 0, v0x55ec65ca5d30_0; 1 drivers
+v0x55ec65ca5d30_1 .array/port v0x55ec65ca5d30, 1;
+v0x55ec65ca5840_1 .net v0x55ec65ca5840 1, 9 0, v0x55ec65ca5d30_1; 1 drivers
+v0x55ec65ca5d30_2 .array/port v0x55ec65ca5d30, 2;
+v0x55ec65ca5840_2 .net v0x55ec65ca5840 2, 9 0, v0x55ec65ca5d30_2; 1 drivers
+v0x55ec65ca5d30_3 .array/port v0x55ec65ca5d30, 3;
+v0x55ec65ca5840_3 .net v0x55ec65ca5840 3, 9 0, v0x55ec65ca5d30_3; 1 drivers
+v0x55ec65ca5d30_4 .array/port v0x55ec65ca5d30, 4;
+v0x55ec65ca5840_4 .net v0x55ec65ca5840 4, 9 0, v0x55ec65ca5d30_4; 1 drivers
+v0x55ec65ca5d30_5 .array/port v0x55ec65ca5d30, 5;
+v0x55ec65ca5840_5 .net v0x55ec65ca5840 5, 9 0, v0x55ec65ca5d30_5; 1 drivers
+v0x55ec65ca5d30_6 .array/port v0x55ec65ca5d30, 6;
+v0x55ec65ca5840_6 .net v0x55ec65ca5840 6, 9 0, v0x55ec65ca5d30_6; 1 drivers
+v0x55ec65ca5d30_7 .array/port v0x55ec65ca5d30, 7;
+v0x55ec65ca5840_7 .net v0x55ec65ca5840 7, 9 0, v0x55ec65ca5d30_7; 1 drivers
+v0x55ec65ca5d30_8 .array/port v0x55ec65ca5d30, 8;
+v0x55ec65ca5840_8 .net v0x55ec65ca5840 8, 9 0, v0x55ec65ca5d30_8; 1 drivers
+v0x55ec65ca5d30_9 .array/port v0x55ec65ca5d30, 9;
+v0x55ec65ca5840_9 .net v0x55ec65ca5840 9, 9 0, v0x55ec65ca5d30_9; 1 drivers
+S_0x55ec65c7a460 .scope module, "f" "func" 2 59, 2 26 0, S_0x55ec65c796d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 10 "a"
+    .port_info 1 /OUTPUT 10 "res"
+P_0x55ec65c9eda0 .param/l "NUM" 0 2 26, +C4<00000000000000000000000000001010>;
+P_0x55ec65c9ede0 .param/l "WIDTH" 0 2 26, +C4<00000000000000000000000000001010>;
+v0x55ec65c9f0b0_0 .net *"_s1", 0 0, L_0x55ec65ca6fa0;  1 drivers
+L_0x7fda8e2cf018 .functor BUFT 1, C4<000000000>, C4<0>, C4<0>, C4<0>;
+v0x55ec65c9f1b0_0 .net/2u *"_s2", 8 0, L_0x7fda8e2cf018;  1 drivers
+v0x55ec65c9f290_0 .net "a", 9 0, o0x7fda8e32e198;  alias, 0 drivers
+v0x55ec65c9f380_0 .net "res", 9 0, L_0x55ec65ca5640;  alias, 1 drivers
+L_0x55ec65ca6fa0 .part o0x7fda8e32e198, 9, 1;
+L_0x55ec65ca5640 .concat [ 9 1 0 0], L_0x7fda8e2cf018, L_0x55ec65ca6fa0;
+S_0x55ec65c7b1f0 .scope generate, "genblk1[0]" "genblk1[0]" 2 49, 2 49 0, S_0x55ec65c796d0;
+ .timescale 0 0;
+P_0x55ec65c9f530 .param/l "i" 0 2 49, +C4<00>;
+S_0x55ec65c7bf80 .scope module, "m" "multiplier" 2 50, 2 5 0, S_0x55ec65c7b1f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 10 "i"
+    .port_info 1 /INPUT 10 "w"
+    .port_info 2 /OUTPUT 10 "res"
+P_0x55ec65c9efb0 .param/l "NUM" 0 2 5, +C4<00000000000000000000000000001010>;
+P_0x55ec65c9eff0 .param/l "WIDTH" 0 2 5, +C4<00000000000000000000000000001010>;
+v0x55ec65c9f840_0 .net "i", 9 0, v0x55ec65ca5b40_0;  alias, 1 drivers
+v0x55ec65c9f940_0 .net "res", 9 0, L_0x55ec65ca5f60;  alias, 1 drivers
+v0x55ec65c9fa20_0 .net "w", 9 0, v0x55ec65ca5d30_0;  alias, 1 drivers
+L_0x55ec65ca5f60 .arith/mult 10, v0x55ec65ca5b40_0, v0x55ec65ca5d30_0;
+S_0x55ec65c7cd10 .scope generate, "genblk1[1]" "genblk1[1]" 2 49, 2 49 0, S_0x55ec65c796d0;
+ .timescale 0 0;
+P_0x55ec65c9fc10 .param/l "i" 0 2 49, +C4<01>;
+S_0x55ec65c7daa0 .scope module, "m" "multiplier" 2 50, 2 5 0, S_0x55ec65c7cd10;
+ .timescale 0 0;
+    .port_info 0 /INPUT 10 "i"
+    .port_info 1 /INPUT 10 "w"
+    .port_info 2 /OUTPUT 10 "res"
+P_0x55ec65c9f690 .param/l "NUM" 0 2 5, +C4<00000000000000000000000000001010>;
+P_0x55ec65c9f6d0 .param/l "WIDTH" 0 2 5, +C4<00000000000000000000000000001010>;
+v0x55ec65c9ff20_0 .net "i", 9 0, v0x55ec65ca5b40_1;  alias, 1 drivers
+v0x55ec65ca0020_0 .net "res", 9 0, L_0x55ec65ca60f0;  alias, 1 drivers
+v0x55ec65ca0100_0 .net "w", 9 0, v0x55ec65ca5d30_1;  alias, 1 drivers
+L_0x55ec65ca60f0 .arith/mult 10, v0x55ec65ca5b40_1, v0x55ec65ca5d30_1;
+S_0x55ec65ca0270 .scope generate, "genblk1[2]" "genblk1[2]" 2 49, 2 49 0, S_0x55ec65c796d0;
+ .timescale 0 0;
+P_0x55ec65ca0440 .param/l "i" 0 2 49, +C4<010>;
+S_0x55ec65ca0520 .scope module, "m" "multiplier" 2 50, 2 5 0, S_0x55ec65ca0270;
+ .timescale 0 0;
+    .port_info 0 /INPUT 10 "i"
+    .port_info 1 /INPUT 10 "w"
+    .port_info 2 /OUTPUT 10 "res"
+P_0x55ec65c9fd70 .param/l "NUM" 0 2 5, +C4<00000000000000000000000000001010>;
+P_0x55ec65c9fdb0 .param/l "WIDTH" 0 2 5, +C4<00000000000000000000000000001010>;
+v0x55ec65ca08f0_0 .net "i", 9 0, v0x55ec65ca5b40_2;  alias, 1 drivers
+v0x55ec65ca09f0_0 .net "res", 9 0, L_0x55ec65ca6280;  alias, 1 drivers
+v0x55ec65ca0ad0_0 .net "w", 9 0, v0x55ec65ca5d30_2;  alias, 1 drivers
+L_0x55ec65ca6280 .arith/mult 10, v0x55ec65ca5b40_2, v0x55ec65ca5d30_2;
+S_0x55ec65ca0c40 .scope generate, "genblk1[3]" "genblk1[3]" 2 49, 2 49 0, S_0x55ec65c796d0;
+ .timescale 0 0;
+P_0x55ec65ca0e60 .param/l "i" 0 2 49, +C4<011>;
+S_0x55ec65ca0f40 .scope module, "m" "multiplier" 2 50, 2 5 0, S_0x55ec65ca0c40;
+ .timescale 0 0;
+    .port_info 0 /INPUT 10 "i"
+    .port_info 1 /INPUT 10 "w"
+    .port_info 2 /OUTPUT 10 "res"
+P_0x55ec65ca0740 .param/l "NUM" 0 2 5, +C4<00000000000000000000000000001010>;
+P_0x55ec65ca0780 .param/l "WIDTH" 0 2 5, +C4<00000000000000000000000000001010>;
+v0x55ec65ca12e0_0 .net "i", 9 0, v0x55ec65ca5b40_3;  alias, 1 drivers
+v0x55ec65ca13e0_0 .net "res", 9 0, L_0x55ec65ca6410;  alias, 1 drivers
+v0x55ec65ca14c0_0 .net "w", 9 0, v0x55ec65ca5d30_3;  alias, 1 drivers
+L_0x55ec65ca6410 .arith/mult 10, v0x55ec65ca5b40_3, v0x55ec65ca5d30_3;
+S_0x55ec65ca1630 .scope generate, "genblk1[4]" "genblk1[4]" 2 49, 2 49 0, S_0x55ec65c796d0;
+ .timescale 0 0;
+P_0x55ec65ca1800 .param/l "i" 0 2 49, +C4<0100>;
+S_0x55ec65ca18e0 .scope module, "m" "multiplier" 2 50, 2 5 0, S_0x55ec65ca1630;
+ .timescale 0 0;
+    .port_info 0 /INPUT 10 "i"
+    .port_info 1 /INPUT 10 "w"
+    .port_info 2 /OUTPUT 10 "res"
+P_0x55ec65ca1160 .param/l "NUM" 0 2 5, +C4<00000000000000000000000000001010>;
+P_0x55ec65ca11a0 .param/l "WIDTH" 0 2 5, +C4<00000000000000000000000000001010>;
+v0x55ec65ca1cb0_0 .net "i", 9 0, v0x55ec65ca5b40_4;  alias, 1 drivers
+v0x55ec65ca1db0_0 .net "res", 9 0, L_0x55ec65ca65a0;  alias, 1 drivers
+v0x55ec65ca1e90_0 .net "w", 9 0, v0x55ec65ca5d30_4;  alias, 1 drivers
+L_0x55ec65ca65a0 .arith/mult 10, v0x55ec65ca5b40_4, v0x55ec65ca5d30_4;
+S_0x55ec65ca2000 .scope generate, "genblk1[5]" "genblk1[5]" 2 49, 2 49 0, S_0x55ec65c796d0;
+ .timescale 0 0;
+P_0x55ec65ca21d0 .param/l "i" 0 2 49, +C4<0101>;
+S_0x55ec65ca22b0 .scope module, "m" "multiplier" 2 50, 2 5 0, S_0x55ec65ca2000;
+ .timescale 0 0;
+    .port_info 0 /INPUT 10 "i"
+    .port_info 1 /INPUT 10 "w"
+    .port_info 2 /OUTPUT 10 "res"
+P_0x55ec65ca1b00 .param/l "NUM" 0 2 5, +C4<00000000000000000000000000001010>;
+P_0x55ec65ca1b40 .param/l "WIDTH" 0 2 5, +C4<00000000000000000000000000001010>;
+v0x55ec65ca2680_0 .net "i", 9 0, v0x55ec65ca5b40_5;  alias, 1 drivers
+v0x55ec65ca2780_0 .net "res", 9 0, L_0x55ec65ca6730;  alias, 1 drivers
+v0x55ec65ca2860_0 .net "w", 9 0, v0x55ec65ca5d30_5;  alias, 1 drivers
+L_0x55ec65ca6730 .arith/mult 10, v0x55ec65ca5b40_5, v0x55ec65ca5d30_5;
+S_0x55ec65ca29d0 .scope generate, "genblk1[6]" "genblk1[6]" 2 49, 2 49 0, S_0x55ec65c796d0;
+ .timescale 0 0;
+P_0x55ec65ca2ba0 .param/l "i" 0 2 49, +C4<0110>;
+S_0x55ec65ca2c80 .scope module, "m" "multiplier" 2 50, 2 5 0, S_0x55ec65ca29d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 10 "i"
+    .port_info 1 /INPUT 10 "w"
+    .port_info 2 /OUTPUT 10 "res"
+P_0x55ec65ca24d0 .param/l "NUM" 0 2 5, +C4<00000000000000000000000000001010>;
+P_0x55ec65ca2510 .param/l "WIDTH" 0 2 5, +C4<00000000000000000000000000001010>;
+v0x55ec65ca3050_0 .net "i", 9 0, v0x55ec65ca5b40_6;  alias, 1 drivers
+v0x55ec65ca3150_0 .net "res", 9 0, L_0x55ec65ca68e0;  alias, 1 drivers
+v0x55ec65ca3230_0 .net "w", 9 0, v0x55ec65ca5d30_6;  alias, 1 drivers
+L_0x55ec65ca68e0 .arith/mult 10, v0x55ec65ca5b40_6, v0x55ec65ca5d30_6;
+S_0x55ec65ca33a0 .scope generate, "genblk1[7]" "genblk1[7]" 2 49, 2 49 0, S_0x55ec65c796d0;
+ .timescale 0 0;
+P_0x55ec65ca0e10 .param/l "i" 0 2 49, +C4<0111>;
+S_0x55ec65ca3600 .scope module, "m" "multiplier" 2 50, 2 5 0, S_0x55ec65ca33a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 10 "i"
+    .port_info 1 /INPUT 10 "w"
+    .port_info 2 /OUTPUT 10 "res"
+P_0x55ec65ca37d0 .param/l "NUM" 0 2 5, +C4<00000000000000000000000000001010>;
+P_0x55ec65ca3810 .param/l "WIDTH" 0 2 5, +C4<00000000000000000000000000001010>;
+v0x55ec65ca3a60_0 .net "i", 9 0, v0x55ec65ca5b40_7;  alias, 1 drivers
+v0x55ec65ca3b60_0 .net "res", 9 0, L_0x55ec65ca6a90;  alias, 1 drivers
+v0x55ec65ca3c40_0 .net "w", 9 0, v0x55ec65ca5d30_7;  alias, 1 drivers
+L_0x55ec65ca6a90 .arith/mult 10, v0x55ec65ca5b40_7, v0x55ec65ca5d30_7;
+S_0x55ec65ca3db0 .scope generate, "genblk1[8]" "genblk1[8]" 2 49, 2 49 0, S_0x55ec65c796d0;
+ .timescale 0 0;
+P_0x55ec65ca3f80 .param/l "i" 0 2 49, +C4<01000>;
+S_0x55ec65ca4060 .scope module, "m" "multiplier" 2 50, 2 5 0, S_0x55ec65ca3db0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 10 "i"
+    .port_info 1 /INPUT 10 "w"
+    .port_info 2 /OUTPUT 10 "res"
+P_0x55ec65ca38b0 .param/l "NUM" 0 2 5, +C4<00000000000000000000000000001010>;
+P_0x55ec65ca38f0 .param/l "WIDTH" 0 2 5, +C4<00000000000000000000000000001010>;
+v0x55ec65ca4430_0 .net "i", 9 0, v0x55ec65ca5b40_8;  alias, 1 drivers
+v0x55ec65ca4530_0 .net "res", 9 0, L_0x55ec65ca6c40;  alias, 1 drivers
+v0x55ec65ca4610_0 .net "w", 9 0, v0x55ec65ca5d30_8;  alias, 1 drivers
+L_0x55ec65ca6c40 .arith/mult 10, v0x55ec65ca5b40_8, v0x55ec65ca5d30_8;
+S_0x55ec65ca4780 .scope generate, "genblk1[9]" "genblk1[9]" 2 49, 2 49 0, S_0x55ec65c796d0;
+ .timescale 0 0;
+P_0x55ec65ca4950 .param/l "i" 0 2 49, +C4<01001>;
+S_0x55ec65ca4a30 .scope module, "m" "multiplier" 2 50, 2 5 0, S_0x55ec65ca4780;
+ .timescale 0 0;
+    .port_info 0 /INPUT 10 "i"
+    .port_info 1 /INPUT 10 "w"
+    .port_info 2 /OUTPUT 10 "res"
+P_0x55ec65ca4280 .param/l "NUM" 0 2 5, +C4<00000000000000000000000000001010>;
+P_0x55ec65ca42c0 .param/l "WIDTH" 0 2 5, +C4<00000000000000000000000000001010>;
+v0x55ec65ca4e00_0 .net "i", 9 0, v0x55ec65ca5b40_9;  alias, 1 drivers
+v0x55ec65ca4f00_0 .net "res", 9 0, L_0x55ec65ca6df0;  alias, 1 drivers
+v0x55ec65ca4fe0_0 .net "w", 9 0, v0x55ec65ca5d30_9;  alias, 1 drivers
+L_0x55ec65ca6df0 .arith/mult 10, v0x55ec65ca5b40_9, v0x55ec65ca5d30_9;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "lab1.v";
