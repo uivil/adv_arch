@@ -1,5 +1,5 @@
-`define NUM 10
-`define WIDTH 10
+`define NUM 13
+`define WIDTH 13
 
 //**********
 module multiplier #(parameter WIDTH = `WIDTH, NUM = `NUM)
@@ -12,14 +12,28 @@ module multiplier #(parameter WIDTH = `WIDTH, NUM = `NUM)
 endmodule
 
 //**********
-module adder #(parameter WIDTH = `WIDTH, NUM = `NUM)
-(
-  input [WIDTH-1:0] a,
-  input [WIDTH-1:0] b,
-  output [WIDTH-1:0] res
+module adder #(parameter start = 0, stop = 16, WIDTH = 16)(
+  input [WIDTH-1:0] in [start:stop],
+  output [WIDTH-1:0] out
 );
-  assign res = a + b;
+localparam dst = stop - start;
+generate
+if (dst == 1) begin
+  assign out = in[start] + in[stop];
+end
+else if (dst == 2) begin
+  assign out = in[start] + in[stop] + in[start+1];
+end else begin
+	wire [WIDTH-1:0] out1;
+	wire [WIDTH-1:0] out2;
+	localparam middle = dst >> 1;
+	adder #(.start(start), .stop(start+middle), .WIDTH(WIDTH)) x (.in(in[start:start+middle]), .out(out1));
+   adder #(.start(start+middle+1), .stop(stop), .WIDTH(WIDTH)) y (.in(in[start+middle+1:stop]), .out(out2));
+	assign out = out1 + out2;
+end
+endgenerate
 endmodule
+
 
 
 //**********
@@ -32,7 +46,7 @@ module func #(parameter WIDTH = `WIDTH, NUM = `NUM)
 endmodule
 
 //**********
-module lab1 #(parameter WIDTH = `WIDTH, NUM = `NUM)
+module neuron #(parameter WIDTH = `WIDTH, NUM = `NUM)
 (
   input [WIDTH-1:0] inputs [0:NUM-1],
   input [WIDTH-1:0] weights [0:NUM-1],
@@ -46,34 +60,39 @@ wire [WIDTH-1:0] ares;
 // I*W
 generate
 genvar i;
-  for (i=0; i<NUM; i=i+1) begin : gen_muls
+  for (i=0; i<NUM; i=i+1) begin : mulgen
     multiplier m(.i(inputs[i]), .w(weights[i]), .res(mres[i]));
   end
 endgenerate
 
-generate
-genvar j;
-//genvar carry_level, carry_node;
-//integer nodes ;
-//carry_level = -1;
-//carry_node = -1;
+// S = S + I*W
+//
+//
+//
 
-for (i=0; i<NUM; i=i+1) begin : gen_levels
-	for (j=0; j<i; j=j+2) begin : gen_nodes
-		wire [WIDTH-1:0] r;
-		if (i==0) begin
-			adder a(.a(mres[j]), .b(mres[j+1]), .res(r));
-		end else begin
-			adder a(.a(gen_levels[i-1].gen_nodes[j*2]), .b(gen_levels[i-1].gen_nodes[j*2+1]), .res(r));			
-		end
-	end
-end
-	
-endgenerate
-
-//assign 
+adder #(.start(0), .stop(NUM-1), .WIDTH(WIDTH)) a(.in(mres), .out(ares));
 
 
-func f(.a(ares), .res(out)); 
+func f(.a(ares), .res(out));
+
+
 endmodule
+
+
+module lab1(output a);
+
+reg [`WIDTH-1:0] inputs   [0:`NUM-1];
+reg [`WIDTH-1:0] weights  [0:`NUM-1];
+
+wire [`WIDTH-1:0] out;
+
+
+neuron #(.WIDTH(`WIDTH), .NUM(`NUM)) n (.inputs(inputs), 
+                                        .weights(weights), 
+                                        .out(out));
+
+assign a = out[0];
+endmodule
+
+
 

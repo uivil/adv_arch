@@ -1,5 +1,5 @@
-Analysis & Elaboration report for lab1
-Sun Oct  1 13:46:37 2017
+Analysis & Synthesis report for lab1
+Sun Oct  8 18:58:49 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -7,10 +7,40 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: neuron:n
+ 10. Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[0].m
+ 11. Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[1].m
+ 12. Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[2].m
+ 13. Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[3].m
+ 14. Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[4].m
+ 15. Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[5].m
+ 16. Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[6].m
+ 17. Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[7].m
+ 18. Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[8].m
+ 19. Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[9].m
+ 20. Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[10].m
+ 21. Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[11].m
+ 22. Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[12].m
+ 23. Parameter Settings for User Entity Instance: neuron:n|adder:a
+ 24. Parameter Settings for User Entity Instance: neuron:n|adder:a|adder:x
+ 25. Parameter Settings for User Entity Instance: neuron:n|adder:a|adder:x|adder:x
+ 26. Parameter Settings for User Entity Instance: neuron:n|adder:a|adder:x|adder:x|adder:x
+ 27. Parameter Settings for User Entity Instance: neuron:n|adder:a|adder:x|adder:x|adder:y
+ 28. Parameter Settings for User Entity Instance: neuron:n|adder:a|adder:x|adder:y
+ 29. Parameter Settings for User Entity Instance: neuron:n|adder:a|adder:y
+ 30. Parameter Settings for User Entity Instance: neuron:n|adder:a|adder:y|adder:x
+ 31. Parameter Settings for User Entity Instance: neuron:n|adder:a|adder:y|adder:y
+ 32. Parameter Settings for User Entity Instance: neuron:n|func:f
+ 33. Port Connectivity Checks: "neuron:n"
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
 
 
 
@@ -34,42 +64,31 @@ applicable agreement for further details.
 
 
 +--------------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                       ;
+; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Failed - Sun Oct  1 13:46:37 2017               ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct  8 18:58:49 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; lab1                                            ;
 ; Top-level Entity Name              ; lab1                                            ;
 ; Family                             ; Cyclone IV GX                                   ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total GXB Receiver Channel PCS     ; N/A until Partition Merge                       ;
-; Total GXB Receiver Channel PMA     ; N/A until Partition Merge                       ;
-; Total GXB Transmitter Channel PCS  ; N/A until Partition Merge                       ;
-; Total GXB Transmitter Channel PMA  ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 1                                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total GXB Receiver Channel PCS     ; 0                                               ;
+; Total GXB Receiver Channel PMA     ; 0                                               ;
+; Total GXB Transmitter Channel PCS  ; 0                                               ;
+; Total GXB Transmitter Channel PMA  ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 4      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
-
-
 +----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                      ;
+; Analysis & Synthesis Settings                                                                                        ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
@@ -154,27 +173,401 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                        ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path              ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------+---------+
+; lab1.sv                          ; yes             ; Auto-Found SystemVerilog HDL File  ; /home/liviu/dev/utm/aa/lab1/build/lab1.sv ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 1                ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; a~output         ;
+; Maximum fan-out          ; 1                ;
+; Total fan-out            ; 1                ;
+; Average fan-out          ; 0.50             ;
++--------------------------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; |lab1                      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 1    ; 0            ; |lab1               ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; WIDTH          ; 13    ; Signed Integer               ;
+; NUM            ; 13    ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[0].m ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 13    ; Signed Integer                                      ;
+; NUM            ; 13    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[1].m ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 13    ; Signed Integer                                      ;
+; NUM            ; 13    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[2].m ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 13    ; Signed Integer                                      ;
+; NUM            ; 13    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[3].m ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 13    ; Signed Integer                                      ;
+; NUM            ; 13    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[4].m ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 13    ; Signed Integer                                      ;
+; NUM            ; 13    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[5].m ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 13    ; Signed Integer                                      ;
+; NUM            ; 13    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[6].m ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 13    ; Signed Integer                                      ;
+; NUM            ; 13    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[7].m ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 13    ; Signed Integer                                      ;
+; NUM            ; 13    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[8].m ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 13    ; Signed Integer                                      ;
+; NUM            ; 13    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[9].m ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 13    ; Signed Integer                                      ;
+; NUM            ; 13    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[10].m ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; WIDTH          ; 13    ; Signed Integer                                       ;
+; NUM            ; 13    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[11].m ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; WIDTH          ; 13    ; Signed Integer                                       ;
+; NUM            ; 13    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|multiplier:mulgen[12].m ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; WIDTH          ; 13    ; Signed Integer                                       ;
+; NUM            ; 13    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|adder:a ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; start          ; 0     ; Signed Integer                       ;
+; stop           ; 12    ; Signed Integer                       ;
+; WIDTH          ; 13    ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|adder:a|adder:x ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; start          ; 0     ; Signed Integer                               ;
+; stop           ; 6     ; Signed Integer                               ;
+; WIDTH          ; 13    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|adder:a|adder:x|adder:x ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; start          ; 0     ; Signed Integer                                       ;
+; stop           ; 3     ; Signed Integer                                       ;
+; WIDTH          ; 13    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|adder:a|adder:x|adder:x|adder:x ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; start          ; 0     ; Signed Integer                                               ;
+; stop           ; 1     ; Signed Integer                                               ;
+; WIDTH          ; 13    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|adder:a|adder:x|adder:x|adder:y ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; start          ; 2     ; Signed Integer                                               ;
+; stop           ; 3     ; Signed Integer                                               ;
+; WIDTH          ; 13    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|adder:a|adder:x|adder:y ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; start          ; 4     ; Signed Integer                                       ;
+; stop           ; 6     ; Signed Integer                                       ;
+; WIDTH          ; 13    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|adder:a|adder:y ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; start          ; 7     ; Signed Integer                               ;
+; stop           ; 12    ; Signed Integer                               ;
+; WIDTH          ; 13    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|adder:a|adder:y|adder:x ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; start          ; 7     ; Signed Integer                                       ;
+; stop           ; 9     ; Signed Integer                                       ;
+; WIDTH          ; 13    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|adder:a|adder:y|adder:y ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; start          ; 10    ; Signed Integer                                       ;
+; stop           ; 12    ; Signed Integer                                       ;
+; WIDTH          ; 13    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: neuron:n|func:f ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; WIDTH          ; 13    ; Signed Integer                      ;
+; NUM            ; 13    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "neuron:n"                                                                                 ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; inputs     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; weights    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; out[12..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Elaboration
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Oct  1 13:46:35 2017
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab1 -c lab1 --analysis_and_elaboration
+    Info: Processing started: Sun Oct  8 18:58:46 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab1 -c lab1
 Info (20029): Only one processor detected - disabling parallel compilation
-Warning (12125): Using design file lab1.sv, which is not specified as a design file for the current project, but contains definitions for 4 design units and 4 entities in project
+Warning (12125): Using design file lab1.sv, which is not specified as a design file for the current project, but contains definitions for 5 design units and 5 entities in project
     Info (12023): Found entity 1: multiplier
     Info (12023): Found entity 2: adder
     Info (12023): Found entity 3: func
-    Info (12023): Found entity 4: lab1
+    Info (12023): Found entity 4: neuron
+    Info (12023): Found entity 5: lab1
 Info (12127): Elaborating entity "lab1" for the top level hierarchy
-Error (10207): Verilog HDL error at lab1.sv(67): can't resolve reference to object "gen_nodes" File: /home/liviu/dev/utm/aa/lab1/build/lab1.sv Line: 67
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus II 64-Bit Analysis & Elaboration was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 928 megabytes
-    Error: Processing ended: Sun Oct  1 13:46:37 2017
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:01
+Warning (10858): Verilog HDL warning at lab1.sv(84): object inputs used but never assigned
+Warning (10858): Verilog HDL warning at lab1.sv(85): object weights used but never assigned
+Warning (10030): Net "inputs" at lab1.sv(84) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "weights" at lab1.sv(85) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "neuron" for hierarchy "neuron:n"
+Info (12128): Elaborating entity "multiplier" for hierarchy "neuron:n|multiplier:mulgen[0].m"
+Info (12128): Elaborating entity "adder" for hierarchy "neuron:n|adder:a"
+Info (12128): Elaborating entity "adder" for hierarchy "neuron:n|adder:a|adder:x"
+Info (12128): Elaborating entity "adder" for hierarchy "neuron:n|adder:a|adder:x|adder:x"
+Info (12128): Elaborating entity "adder" for hierarchy "neuron:n|adder:a|adder:x|adder:x|adder:x"
+Info (12128): Elaborating entity "adder" for hierarchy "neuron:n|adder:a|adder:x|adder:x|adder:y"
+Info (12128): Elaborating entity "adder" for hierarchy "neuron:n|adder:a|adder:x|adder:y"
+Info (12128): Elaborating entity "adder" for hierarchy "neuron:n|adder:a|adder:y"
+Info (12128): Elaborating entity "adder" for hierarchy "neuron:n|adder:a|adder:y|adder:x"
+Info (12128): Elaborating entity "adder" for hierarchy "neuron:n|adder:a|adder:y|adder:y"
+Info (12128): Elaborating entity "func" for hierarchy "neuron:n|func:f"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "a" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 0 input pins
+    Info (21059): Implemented 1 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 678 megabytes
+    Info: Processing ended: Sun Oct  8 18:58:49 2017
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
